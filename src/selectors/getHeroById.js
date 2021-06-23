@@ -1,5 +1,5 @@
 import { heroes } from '../data/heroes'
 
-export const getHeroesByPublisher = id => {
-	return heroes.filter(hero => hero.id == id)
+export const getHeroById = id => {
+	return heroes.filter(hero => hero.id === id)
 }
