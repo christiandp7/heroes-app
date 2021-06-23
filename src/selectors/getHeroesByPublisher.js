@@ -5,5 +5,5 @@ export const getHeroesByPublisher = publisher => {
 	if (!validPublishers.includes(publisher)) {
 		throw new Error(`Publisher "${publisher}" is not correct`)
 	}
-	return heroes.filter(hero => hero.publisher == publisher)
+	return heroes.filter(hero => hero.publisher === publisher)
 }

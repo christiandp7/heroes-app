@@ -10,7 +10,7 @@ const HeroCard = ({
 	characters,
 }) => {
 	return (
-		<div class="col-sm-6 col-md-6">
+		<div className="col-sm-6 col-md-6">
 			<div className="card">
 				<div className="row no-gutters">
 					<div className="col-sm-12 col-md-4">
@@ -22,7 +22,7 @@ const HeroCard = ({
 					</div>
 					<div className="col-sm-12 col-md-8">
 						<div className="card-body">
-							<h5 class="card-title">{superhero}</h5>
+							<h5 className="card-title">{superhero}</h5>
 							<p className="card-text">{alter_ego}</p>
 							{alter_ego !== characters && (
 								<p className="card-text">{characters}</p>
