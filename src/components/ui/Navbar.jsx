@@ -1,7 +1,19 @@
-import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Link, NavLink, useHistory } from 'react-router-dom'
+import { AuthContext } from '../../auth/AuthContext'
+import { types } from '../../types/types'
 
 const Navbar = () => {
+	const { user, dispatch } = useContext(AuthContext)
+	const history = useHistory()
+
+	const handleLogout = () => {
+		dispatch({
+			type: types.logout,
+		})
+		history.replace('/login')
+	}
+
 	return (
 		<nav className="navbar navbar-expand-sm navbar-dark bg-dark px-3">
 			<Link className="navbar-brand" to="/">
@@ -37,13 +49,12 @@ const Navbar = () => {
 
 			<div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
 				<ul className="navbar-nav ms-auto">
-					<NavLink
-						activeClassName="active"
-						className="nav-item nav-link"
-						exact
-						to="/login">
+					<span className="nav-item nav-link text-info">
+						{user && user.name}
+					</span>
+					<button className="btn nav-item nav-link" onClick={handleLogout}>
 						Logout
-					</NavLink>
+					</button>
 				</ul>
 			</div>
 		</nav>
