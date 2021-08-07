@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SearchScreen /> test should be shown with right values 1`] = `
+Array [
+  <h1>
+    Seach Screen
+  </h1>,
+  <hr />,
+  <div
+    className="row"
+  >
+    <div
+      className="col-5"
+    >
+      <h4>
+        Seach Form
+      </h4>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          autoComplete="off"
+          className="form-control"
+          name="searchText"
+          onChange={[Function]}
+          placeholder="Find your Hero"
+          type="text"
+          value=""
+        />
+        <button
+          className="btn btn-block btn-outline-primary mt-2"
+          type="submit"
+        >
+          Search...
+        </button>
+      </form>
+    </div>
+    <div
+      className="col-7"
+    >
+      <h4>
+        Results
+      </h4>
+      <hr />
+      <div
+        className="alert alert-info"
+      >
+        Search a Hero
+      </div>
+      <div
+        className="row no-gutters"
+      />
+    </div>
+  </div>,
+]
+`;
+
+exports[`<SearchScreen /> test should show Batman and the input with the same queryString value 1`] = `
+Array [
+  <h1>
+    Seach Screen
+  </h1>,
+  <hr />,
+  <div
+    className="row"
+  >
+    <div
+      className="col-5"
+    >
+      <h4>
+        Seach Form
+      </h4>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          autoComplete="off"
+          className="form-control"
+          name="searchText"
+          onChange={[Function]}
+          placeholder="Find your Hero"
+          type="text"
+          value="batman"
+        />
+        <button
+          className="btn btn-block btn-outline-primary mt-2"
+          type="submit"
+        >
+          Search...
+        </button>
+      </form>
+    </div>
+    <div
+      className="col-7"
+    >
+      <h4>
+        Results
+      </h4>
+      <hr />
+      <div
+        className="row no-gutters"
+      >
+        <div
+          className="col-sm-6 col-md-6"
+        >
+          <div
+            className="card"
+          >
+            <div
+              className="row no-gutters"
+            >
+              <div
+                className="col-sm-12 col-md-4"
+              >
+                <img
+                  alt="Batman"
+                  className="img-fluid rounded-start"
+                  src="assets/heroes/dc-batman.jpg"
+                />
+              </div>
+              <div
+                className="col-sm-12 col-md-8"
+              >
+                <div
+                  className="card-body"
+                >
+                  <h5
+                    className="card-title"
+                  >
+                    Batman
+                  </h5>
+                  <p
+                    className="card-text"
+                  >
+                    Bruce Wayne
+                  </p>
+                  <p
+                    className="card-text"
+                  >
+                    <small
+                      className="text-muted"
+                    >
+                      Detective Comics #27
+                    </small>
+                  </p>
+                  <a
+                    className="btn btn-primary"
+                    href="/hero/dc-batman"
+                    onClick={[Function]}
+                  >
+                    Mas...
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`<SearchScreen /> test should show a error message if Hero does not exists 1`] = `
+Array [
+  <h1>
+    Seach Screen
+  </h1>,
+  <hr />,
+  <div
+    className="row"
+  >
+    <div
+      className="col-5"
+    >
+      <h4>
+        Seach Form
+      </h4>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          autoComplete="off"
+          className="form-control"
+          name="searchText"
+          onChange={[Function]}
+          placeholder="Find your Hero"
+          type="text"
+          value="nohero"
+        />
+        <button
+          className="btn btn-block btn-outline-primary mt-2"
+          type="submit"
+        >
+          Search...
+        </button>
+      </form>
+    </div>
+    <div
+      className="col-7"
+    >
+      <h4>
+        Results
+      </h4>
+      <hr />
+      <div
+        className="alert alert-danger"
+      >
+        There is not a Hero with "
+        nohero
+        "
+      </div>
+      <div
+        className="row no-gutters"
+      />
+    </div>
+  </div>,
+]
+`;
